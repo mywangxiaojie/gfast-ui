@@ -1,0 +1,8 @@
+web:
+  image: nginx:alpine
+  container_name: yiwangtongguan_web
+  volumes:
+    - ./dist:/code
+    - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+  ports:
+    - "8080:80"
